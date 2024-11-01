@@ -25,34 +25,34 @@ const time = process.uptime(),
     seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
 var juswa = moment.tz("Asia/Manila").format("『D/MM/YYYY』 【hh:mm:ss】");
-var link = ["https://i.postimg.cc/yd8TtCQx/received-825512762409044.jpg", 
+var link = ["https://i.postimg.cc/7P9RhdqK/1719286765681.jpg", 
 
-            "https://i.postimg.cc/CMWQBdr4/received-844582530583225.jpg", 
+            "https://i.postimg.cc/7P9RhdqK/1719286765681.jpg", 
 
-            "https://i.postimg.cc/cJ2Q9tn9/received-943134260313225.jpg",
+            "https://i.postimg.cc/7P9RhdqK/1719286765681.jpg",
 
-"https://i.postimg.cc/zXzRkFQD/received-1513370482734848.jpg",
+"https://i.postimg.cc/7P9RhdqK/1719286765681.jpg",
 
-            "https://i.postimg.cc/zB24Pjjm/IMG-8481.jpg"];
+            "https://i.postimg.cc/vHD0Bmqm/Screenshot-20240829-024950-4.png"];
 
 var callback = () => api.sendMessage({body:`𝙸𝙽𝙵𝙾 𝙰𝙽𝙳 𝙱𝙾𝚃 𝙸𝙽𝙵𝙾𝚁𝙼𝙰𝚃𝙸𝙾𝙽
 ________________________________________
 
 ❇️𝙱𝙾𝚃 𝙽𝙰𝙼𝙴 : ${global.config.BOTNAME}
 
-❇️𝙱𝙾𝚃 𝙰𝙳𝙼𝙸𝙽 :『 𝙵𝙰𝚁𝙷𝙰𝙽-𝙸𝚂𝙻𝙰𝙼 』
+❇️𝙱𝙾𝚃 𝙰𝙳𝙼𝙸𝙽 :『 𝙼𝙾𝙷𝙰𝙼𝙼𝙰𝙳-𝚁𝙰𝙷𝙰𝚃 』
 
-❇️𝙰𝙳𝙳𝚁𝙴𝚂𝚂 : 𝙱𝙰𝚁𝙸𝚂𝙷𝙰𝙻
+❇️𝙰𝙳𝙳𝚁𝙴𝚂𝚂 : 𝙳𝙷𝙰𝙺𝙰
 
 _____________𝙲𝙾𝙽𝚃𝙰𝙲𝚃_____________
 
-❇️𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 𝙸𝙳 : https://www.facebook.com/profile.php?id=100089974857944
+❇️𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝙺 𝙸𝙳 : https://www.facebook.com/rahat.islam87
 
-❇️𝙵𝙰𝙲𝙴𝙱𝙾𝙾𝚔 𝙿𝙰𝙶𝙴: https://www.facebook.com/FarhanIslamImon.official?mibextid=ZbWKwL
+❇️𝚆𝙷𝙰𝚃𝚂'𝙰𝙿𝙿 : 0186𝙵𝙰𝙺 𝙵𝙰𝙺😝
 
 ❇️𝙱𝙾𝚃 𝙿𝚁𝙴𝙵𝙸𝚇 : ${global.config.PREFIX}
 
-❇️𝙱𝙾𝚃 𝙾𝚆𝙽𝙴𝚁 :  𝙵𝙰𝚁𝙷𝙰𝙽_𝙸𝚂𝙻𝙰𝙼
+❇️𝙱𝙾𝚃 𝙾𝚆𝙽𝙴𝚁 :  𝙼𝙾𝙷𝙰𝙼𝙼𝙰𝙳_𝚁𝙰𝙷𝙰𝚃
 
 𝙾𝚃𝙷𝙴𝚁 𝙸𝙽𝙵𝙾𝙼𝙰𝚃𝙸𝙾𝙽____________________
 
@@ -66,4 +66,4 @@ _____________𝙲𝙾𝙽𝚃𝙰𝙲𝚃_____________
 
 𝚃𝙷𝙰𝙽𝙺𝚂 𝙵𝙾𝚁 𝚄𝚂𝙸𝙽𝙶 ${global.config.BOTNAME} 『🤖🖤』`,attachment: fs.createReadStream(__dirname + "/cache/juswa.jpg")}, event.threadID, () => fs.unlinkSync(__dirname + "/cache/juswa.jpg")); 
       return request(encodeURI(link[Math.floor(Math.random() * link.length)])).pipe(fs.createWriteStream(__dirname+"/cache/juswa.jpg")).on("close",() => callback());
-   }; 
+   };
